@@ -1,0 +1,21 @@
+{
+    "name": "tame/route",
+    "description": "Route handler for Core PHP",
+    "type": "library",
+    "license": "MLT",
+    "autoload": {
+        "psr-4": {
+            "Tame\\Route\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "solTech001",
+            "email": "omotayoopeyemi32@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php" : ">=8.0"
+    }
+}
