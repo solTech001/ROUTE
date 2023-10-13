@@ -15,4 +15,5 @@ return array(
     'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
     '667aeda72477189d0494fecd327c3641' => $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
     '353c763fa2a790cb7c13aa293f6352f0' => $vendorDir . '/tamedevelopers/support/helpers.php',
+    '6913bc8977d8bcfd27b0a925d3557f83' => $baseDir . '/src/helpers.php',
 );

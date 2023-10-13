@@ -16,13 +16,14 @@ class ComposerStaticInitb580b125f19454d04e8b779a1a0576c7
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '353c763fa2a790cb7c13aa293f6352f0' => __DIR__ . '/..' . '/tamedevelopers/support/helpers.php',
+        '6913bc8977d8bcfd27b0a925d3557f83' => __DIR__ . '/../..' . '/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
             'Tamedevelopers\\Support\\' => 23,
-            'Tame\\Route\\' => 11,
+            'Tamedevelopers\\Route\\' => 21,
         ),
         'S' => 
         array (
@@ -60,7 +61,7 @@ class ComposerStaticInitb580b125f19454d04e8b779a1a0576c7
         array (
             0 => __DIR__ . '/..' . '/tamedevelopers/support',
         ),
-        'Tame\\Route\\' => 
+        'Tamedevelopers\\Route\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

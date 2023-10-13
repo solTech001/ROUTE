@@ -1,5 +1,5 @@
 {
-    "name": "tame/route",
+    "name": "tamedevelopers/route",
     "description": "Route handler for Core PHP",
     "type": "library",
     "license": "MLT",
@@ -23,8 +23,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Tame\\Route\\": "src/"
-        }
+            "Tamedevelopers\\Route\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "minimum-stability": "stable"
 }

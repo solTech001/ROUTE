@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'tame/route',
+        'name' => 'tamedevelopers/route',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '926aeebe1ad59cdde53939d4520c83556be3207b',
+        'reference' => 'dc26f037b89ae816fe36220a564d46a0bb5ae01f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -142,10 +142,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'tame/route' => array(
+        'tamedevelopers/route' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '926aeebe1ad59cdde53939d4520c83556be3207b',
+            'reference' => 'dc26f037b89ae816fe36220a564d46a0bb5ae01f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
