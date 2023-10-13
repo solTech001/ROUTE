@@ -19,11 +19,16 @@
     ],
     "require": {
         "php" : ">=8.0",
-        "tamedevelopers/support" : "*"
+        "tamedevelopers/support" : "*",
+        "tamedevelopers/database" : "*"
     },
     "autoload": {
         "psr-4": {
-            "Tamedevelopers\\Route\\": "src/"
+            "Tamedevelopers\\App\\": "src/",
+            "Tamedevelopers\\Route\\": "src/",
+            "Tamedevelopers\\Request\\": "src/",
+            "Tamedevelopers\\Providers\\": "src/",
+            "Tamedevelopers\\Middleware\\": "src/"
         },
         "files": [
             "src/helpers.php"

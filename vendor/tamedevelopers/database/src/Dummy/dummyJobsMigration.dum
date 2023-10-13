@@ -1,0 +1,48 @@
+<?php
+
+use Tamedevelopers\Database\Migrations\Schema;
+use Tamedevelopers\Database\Migrations\Blueprint;
+use Tamedevelopers\Database\Migrations\Migration;
+
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return mixed
+     */
+    public function up()
+    {
+        Schema::create('dummy_table', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id')->index()->nullable();
+            $table->json('payload')->nullable();
+            $table->json('file')->nullable();
+            $table->string('email');
+            $table->string('subject');
+            $table->longText('message');
+            $table->text('alt_message')->nullable();
+            $table->string('error')->nullable();
+            $table->string('type')->nullable();
+            $table->integer('status')->default(0)->index();
+            $table->integer('attempts')->default(0)->index();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Drop database table
+     *
+     * @param bool $force 
+     * [optional] Default is false
+     * Force drop all tables or throw an error on Foreign keys
+     * 
+     * @return mixed
+     */
+    public function drop($force = false)
+    {
+        return Schema::dropTable('dummy_table', $force);
+    }
+
+};

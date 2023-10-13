@@ -1,6 +1,7 @@
 <?php 
 
-use Tamedevelopers\Route\Route;
+use Tamedevelopers\Support\Env;
+use Tamedevelopers\Support\Capsule\DebugManager;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,19 @@ use Tamedevelopers\Route\Route;
 require __DIR__.'/vendor/autoload.php';
 
 
+// This is just a helper to create error logger
+// and error handler
+DebugManager::boot();
+// Env::bootLogger();
 
-$url = Route::get('home', [Route::class]);
 
 
+// manually adding the web route for testing purpose only
+// later on we'll device a way to autoload and register all routes from a particular phase
+// so our app can be a little similar to that of Laravel
+// the only folder you should concentrate on working on is the `src folder` where our Library code stays
 
-dd(
-    'testing .htaccess',
-    $url,
-    Route::redirect('', 'https://google.com')
-);
+// at the end of the day we can create a method that will auto generate every other relevant files 
+// into our application. for now just work and test locally
+require base_path('routes/web.php');
+require base_path('routes/admin.php');

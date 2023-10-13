@@ -78,6 +78,80 @@
             "install-path": "../cocur/slugify"
         },
         {
+            "name": "filp/whoops",
+            "version": "2.15.3",
+            "version_normalized": "2.15.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c83e88a30524f9360b11f585f71e6b17313b7187",
+                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9 || ^7.0 || ^8.0",
+                "psr/log": "^1.0.1 || ^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9 || ^1.0",
+                "phpunit/phpunit": "^4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.3",
+                "symfony/var-dumper": "^2.6 || ^3.0 || ^4.0 || ^5.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
+                "whoops/soap": "Formats errors as SOAP responses"
+            },
+            "time": "2023-07-13T12:00:00+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Whoops\\": "src/Whoops/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://filp.github.io/whoops/",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "throwable",
+                "whoops"
+            ],
+            "support": {
+                "issues": "https://github.com/filp/whoops/issues",
+                "source": "https://github.com/filp/whoops/tree/2.15.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/denis-sokolov",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../filp/whoops"
+        },
+        {
             "name": "graham-campbell/result-type",
             "version": "v1.1.1",
             "version_normalized": "1.1.1.0",
@@ -275,6 +349,59 @@
                 "source": "https://github.com/php-fig/container/tree/2.0.2"
             },
             "install-path": "../psr/container"
+        },
+        {
+            "name": "psr/log",
+            "version": "3.0.0",
+            "version_normalized": "3.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "time": "2021-07-14T16:46:02+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/3.0.0"
+            },
+            "install-path": "../psr/log"
         },
         {
             "name": "symfony/console",
@@ -1129,24 +1256,88 @@
             "install-path": "../symfony/var-dumper"
         },
         {
-            "name": "tamedevelopers/support",
-            "version": "2.0.3",
-            "version_normalized": "2.0.3.0",
+            "name": "tamedevelopers/database",
+            "version": "5.0.2",
+            "version_normalized": "5.0.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tamedevelopers/support.git",
-                "reference": "a3fc6843093deffd96a89c65d38d15c398cafe96"
+                "url": "https://github.com/tamedevelopers/database.git",
+                "reference": "629e0aa2616ae8274692e93fb261a793baa5fb2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tamedevelopers/support/zipball/a3fc6843093deffd96a89c65d38d15c398cafe96",
-                "reference": "a3fc6843093deffd96a89c65d38d15c398cafe96",
+                "url": "https://api.github.com/repos/tamedevelopers/database/zipball/629e0aa2616ae8274692e93fb261a793baa5fb2e",
+                "reference": "629e0aa2616ae8274692e93fb261a793baa5fb2e",
+                "shasum": ""
+            },
+            "require": {
+                "filp/whoops": "^2.15",
+                "php": ">=8.0",
+                "tamedevelopers/support": "^2.0.0",
+                "vlucas/phpdotenv": "^5.4.1"
+            },
+            "time": "2023-10-09T04:07:08+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Tamedevelopers\\Database\\": "src/"
+                },
+                "classmap": [
+                    "src/*"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fredrick Peterson",
+                    "email": "fredi.peterson2000@gmail.com"
+                },
+                {
+                    "name": "Tame Developers",
+                    "email": "tamedevelopers@gmail.com"
+                }
+            ],
+            "description": "Lightweight PHP ORM Database Model.",
+            "homepage": "https://github.com/tamedevelopers/database",
+            "keywords": [
+                "orm database",
+                "php database",
+                "php orm database",
+                "php orm github"
+            ],
+            "support": {
+                "issues": "https://github.com/tamedevelopers/database/issues",
+                "source": "https://github.com/tamedevelopers/database/tree/5.0.2"
+            },
+            "install-path": "../tamedevelopers/database"
+        },
+        {
+            "name": "tamedevelopers/support",
+            "version": "2.0.5",
+            "version_normalized": "2.0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tamedevelopers/support.git",
+                "reference": "d7c6b641df4cf0f89fdede42421fdf2691d4ec27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tamedevelopers/support/zipball/d7c6b641df4cf0f89fdede42421fdf2691d4ec27",
+                "reference": "d7c6b641df4cf0f89fdede42421fdf2691d4ec27",
                 "shasum": ""
             },
             "require": {
                 "cocur/slugify": "^4.2.0",
                 "ext-ctype": "*",
                 "ext-mbstring": "*",
+                "filp/whoops": "^2.15",
                 "php": ">=8.0",
                 "symfony/console": "^6.2",
                 "symfony/var-dumper": "*",
@@ -1155,7 +1346,7 @@
             "suggest": {
                 "dompdf/dompdf": "Required to use the `PDF` class and helper (^2.0.2)."
             },
-            "time": "2023-10-12T13:05:35+00:00",
+            "time": "2023-10-13T21:23:13+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1184,7 +1375,7 @@
             "homepage": "https://github.com/tamedevelopers/support",
             "support": {
                 "issues": "https://github.com/tamedevelopers/support/issues",
-                "source": "https://github.com/tamedevelopers/support/tree/2.0.3"
+                "source": "https://github.com/tamedevelopers/support/tree/2.0.5"
             },
             "install-path": "../tamedevelopers/support"
         },

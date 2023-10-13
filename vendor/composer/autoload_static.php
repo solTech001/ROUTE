@@ -16,14 +16,24 @@ class ComposerStaticInitb580b125f19454d04e8b779a1a0576c7
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '353c763fa2a790cb7c13aa293f6352f0' => __DIR__ . '/..' . '/tamedevelopers/support/helpers.php',
+        '3a5011b4acd9495a49133cbf9fff3735' => __DIR__ . '/..' . '/tamedevelopers/database/src/helpers.php',
         '6913bc8977d8bcfd27b0a925d3557f83' => __DIR__ . '/../..' . '/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'Whoops\\' => 7,
+        ),
         'T' => 
         array (
             'Tamedevelopers\\Support\\' => 23,
             'Tamedevelopers\\Route\\' => 21,
+            'Tamedevelopers\\Request\\' => 23,
+            'Tamedevelopers\\Providers\\' => 25,
+            'Tamedevelopers\\Middleware\\' => 26,
+            'Tamedevelopers\\Database\\' => 24,
+            'Tamedevelopers\\App\\' => 19,
         ),
         'S' => 
         array (
@@ -39,6 +49,7 @@ class ComposerStaticInitb580b125f19454d04e8b779a1a0576c7
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'PhpOption\\' => 10,
         ),
@@ -57,11 +68,35 @@ class ComposerStaticInitb580b125f19454d04e8b779a1a0576c7
     );
 
     public static $prefixDirsPsr4 = array (
+        'Whoops\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
         'Tamedevelopers\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/tamedevelopers/support',
         ),
         'Tamedevelopers\\Route\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Tamedevelopers\\Request\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Tamedevelopers\\Providers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Tamedevelopers\\Middleware\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Tamedevelopers\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tamedevelopers/database/src',
+        ),
+        'Tamedevelopers\\App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -101,6 +136,10 @@ class ComposerStaticInitb580b125f19454d04e8b779a1a0576c7
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -129,6 +168,44 @@ class ComposerStaticInitb580b125f19454d04e8b779a1a0576c7
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'Tamedevelopers\\Database\\Capsule\\AppManager' => __DIR__ . '/..' . '/tamedevelopers/database/src/Capsule/AppManager.php',
+        'Tamedevelopers\\Database\\Capsule\\DebugManager' => __DIR__ . '/..' . '/tamedevelopers/database/src/Capsule/DebugManager.php',
+        'Tamedevelopers\\Database\\Collections\\Collection' => __DIR__ . '/..' . '/tamedevelopers/database/src/Collections/Collection.php',
+        'Tamedevelopers\\Database\\Collections\\CollectionMapper' => __DIR__ . '/..' . '/tamedevelopers/database/src/Collections/CollectionMapper.php',
+        'Tamedevelopers\\Database\\Collections\\CollectionProperty' => __DIR__ . '/..' . '/tamedevelopers/database/src/Collections/CollectionProperty.php',
+        'Tamedevelopers\\Database\\Collections\\Traits\\CollectionTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Collections/Traits/CollectionTrait.php',
+        'Tamedevelopers\\Database\\Collections\\Traits\\RelatedTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Collections/Traits/RelatedTrait.php',
+        'Tamedevelopers\\Database\\Connectors\\ConnectionBuilder' => __DIR__ . '/..' . '/tamedevelopers/database/src/Connectors/ConnectionBuilder.php',
+        'Tamedevelopers\\Database\\Connectors\\Connector' => __DIR__ . '/..' . '/tamedevelopers/database/src/Connectors/Connector.php',
+        'Tamedevelopers\\Database\\Connectors\\ConnectorInterface' => __DIR__ . '/..' . '/tamedevelopers/database/src/Connectors/ConnectorInterface.php',
+        'Tamedevelopers\\Database\\Connectors\\MysqlConnector' => __DIR__ . '/..' . '/tamedevelopers/database/src/Connectors/MysqlConnector.php',
+        'Tamedevelopers\\Database\\Connectors\\PostgresConnector' => __DIR__ . '/..' . '/tamedevelopers/database/src/Connectors/PostgresConnector.php',
+        'Tamedevelopers\\Database\\Connectors\\SQLiteConnector' => __DIR__ . '/..' . '/tamedevelopers/database/src/Connectors/SQLiteConnector.php',
+        'Tamedevelopers\\Database\\Connectors\\Traits\\ConnectorTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Connectors/Traits/ConnectorTrait.php',
+        'Tamedevelopers\\Database\\MigrationTrait\\Traits\\TableStructureTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Traits/TableStructureTrait.php',
+        'Tamedevelopers\\Database\\Migrations\\Blueprint' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Blueprint.php',
+        'Tamedevelopers\\Database\\Migrations\\Migration' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Migration.php',
+        'Tamedevelopers\\Database\\Migrations\\Schema' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Schema.php',
+        'Tamedevelopers\\Database\\Migrations\\Traits\\FilePathTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Traits/FilePathTrait.php',
+        'Tamedevelopers\\Database\\Migrations\\Traits\\ManagerTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Traits/ManagerTrait.php',
+        'Tamedevelopers\\Database\\Migrations\\Traits\\MigrationTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Traits/MigrationTrait.php',
+        'Tamedevelopers\\Database\\Migrations\\Traits\\SchemaCollectionTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Traits/SchemeCollectionTrait.php',
+        'Tamedevelopers\\Database\\Migrations\\Traits\\SchemaConfigurationTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Traits/SchemaConfigurationTrait.php',
+        'Tamedevelopers\\Database\\Migrations\\Traits\\SchemaTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Migrations/Traits/SchemaTrait.php',
+        'Tamedevelopers\\Database\\Schema\\Builder' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Builder.php',
+        'Tamedevelopers\\Database\\Schema\\BuilderCompiler' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/BuilderCompiler.php',
+        'Tamedevelopers\\Database\\Schema\\Expression' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Expression.php',
+        'Tamedevelopers\\Database\\Schema\\JoinClause' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/JoinClause.php',
+        'Tamedevelopers\\Database\\Schema\\Pagination\\Paginator' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Pagination/Paginator.php',
+        'Tamedevelopers\\Database\\Schema\\Pagination\\PaginatorAsset' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Pagination/PaginatorAsset.php',
+        'Tamedevelopers\\Database\\Schema\\Pagination\\Yidas\\PaginationLoader' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Pagination/Yidas/PaginationLoader.php',
+        'Tamedevelopers\\Database\\Schema\\Pagination\\Yidas\\PaginationWidget' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Pagination/Yidas/PaginationWidget.php',
+        'Tamedevelopers\\Database\\Schema\\Traits\\BuilderTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Traits/BuilderTrait.php',
+        'Tamedevelopers\\Database\\Schema\\Traits\\ExpressionTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Traits/ExpressionTrait.php',
+        'Tamedevelopers\\Database\\Schema\\Traits\\MySqlProperties' => __DIR__ . '/..' . '/tamedevelopers/database/src/Schema/Traits/MySqlProperties.php',
+        'Tamedevelopers\\Database\\Traits\\AutoLoaderTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Traits/AutoLoaderTrait.php',
+        'Tamedevelopers\\Database\\Traits\\DBImportTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Traits/DBImportTrait.php',
+        'Tamedevelopers\\Database\\Traits\\DBSetupTrait' => __DIR__ . '/..' . '/tamedevelopers/database/src/Traits/DBSetupTrait.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
