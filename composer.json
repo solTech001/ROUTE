@@ -3,19 +3,28 @@
     "description": "Route handler for Core PHP",
     "type": "library",
     "license": "MLT",
+    "authors": [
+        {
+            "name": "Opeyemi",
+            "email": "omotayoopeyemi32@gmail.com"
+        },
+        {
+            "name": "Gracious",
+            "email": "obeagug@gmail.com"
+        },
+        {
+            "name": "Peter",
+            "email": "fredi.peterson2000@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=8.0",
+        "tamedevelopers/support" : "*"
+    },
     "autoload": {
         "psr-4": {
             "Tame\\Route\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "solTech001",
-            "email": "omotayoopeyemi32@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php" : ">=8.0"
-    }
+    "minimum-stability": "stable"
 }
