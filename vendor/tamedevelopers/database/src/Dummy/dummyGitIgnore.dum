@@ -1,8 +1,0 @@
-/upload
-/vendor
-/.idea
-/.vscode
-/.github
-.gitignore
-.env
-composer.lock
