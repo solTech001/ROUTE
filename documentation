@@ -1,0 +1,6 @@
+We are only working on the `scr` folder.
+
+Whatever we're doing in the other folder are just test simulation on how it should work when installing globally.
+
+Whenever you manually update your composer.json file, always remember to run `composer update`
+this will update your composer to autoload the changes if any.
