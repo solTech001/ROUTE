@@ -38,7 +38,7 @@ trait RouteTrait{
 
         self::$routes[] = $route;
 
-        return self::boot();
+        return self::instance();
     }
 
     /**
@@ -57,7 +57,7 @@ trait RouteTrait{
         $currentRoute = end(self::$routes);
         self::$namedRoutes[$name] = $currentRoute;
 
-        return self::boot();
+        return self::instance();
     }
 
     /**
@@ -74,7 +74,7 @@ trait RouteTrait{
             self::$middlewares[] = $middlewares;
         }
 
-        return self::boot();
+        return self::instance();
     }
 
     /**

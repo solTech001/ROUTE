@@ -13,8 +13,6 @@ use Tamedevelopers\Route\Route;
 */
 
 Route::middleware('admin')->get('admin', function(){
-
-
     dump(
         'testing route execution'
     );

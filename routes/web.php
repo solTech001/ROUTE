@@ -27,7 +27,7 @@ Route::middleware('web')
 
 
 // products group
-Route::group(['prefix' => 'store'], function(){
+Route::group(['middleware' => 'store','prefix' => 'store'], function(){
     Route::get('/{slug?}', [TestClass::class, 'index'])->name('products.home');
     Route::post('addToCart', [TestClass::class, 'addToCart'])->name('products.addToCart');
     Route::post('updateCart', [TestClass::class, 'updateCart'])->name('products.updateCart');
@@ -45,7 +45,7 @@ Route::dispatch(
 dump(
     'testing .htaccess',
     Route::request(),
-    Route::request()->getUrl(),
+    // Route::request()->getUrl(),
     // Route::tests(),
     // RouteHelper::generateUrl(),
 );

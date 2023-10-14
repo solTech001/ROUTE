@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Tamedevelopers\Route;
 
 use Closure;
-use function PHPSTORM_META\type;
 use Tamedevelopers\Request\Request;
-
 use Tamedevelopers\Route\Traits\RouteTrait;
 use Tamedevelopers\Route\Traits\RouteHelperTrait;
 
@@ -57,32 +55,17 @@ class Route
      */
     static protected $currentRoute;
 
-    /**
-     * Initialize route
-     *
-     * @return $this
-     */
-    public static function boot()
-    {
-        if (!self::$currentRoute) {
-            self::$currentRoute = new self();
-            self::$request      = new Request();
-        }
-
-        return self::$currentRoute;
-    }
-
     // routes
     static public function tests()
     {
-        return [
+        dump(
             // self::$routes,
-            // self::$middlewares,
+            self::$middlewares,
             self::$namedRoutes,
-            // self::$prefix,
-        ];
+            self::$prefix,
+        );
     }
-    
+
     /**
      * Return Instance of Request Class
      *
@@ -94,6 +77,21 @@ class Route
     }
 
     /**
+     * Initialize route
+     *
+     * @return $this
+     */
+    private static function instance()
+    {
+        if (!self::$currentRoute) {
+            self::$currentRoute = new self();
+            self::$request      = new Request();
+        }
+
+        return self::$currentRoute;
+    }
+
+    /**
      * Add a GET route.
      *
      * @param string $url
@@ -102,7 +100,7 @@ class Route
      */
     static public function get($url, $callback)
     {
-        return self::boot()->addRoute('GET', $url, $callback);
+        return self::addRoute('GET', $url, $callback);
     }
 
     /**
@@ -114,7 +112,7 @@ class Route
      */
     static public function post($url, $callback)
     {
-        return self::boot()->addRoute('POST', $url, $callback);
+        return self::addRoute('POST', $url, $callback);
     }
 
     /**
@@ -126,7 +124,7 @@ class Route
      */
     static public function put($url, $callback)
     {
-        return self::boot()->addRoute('PUT', $url, $callback);
+        return self::addRoute('PUT', $url, $callback);
     }
 
     /**
@@ -138,7 +136,7 @@ class Route
      */
     static public function patch($url, $callback)
     {
-        return self::boot()->addRoute('PATCH', $url, $callback);
+        return self::addRoute('PATCH', $url, $callback);
     }
 
     /**
@@ -150,7 +148,7 @@ class Route
      */
     public static function delete($url, $callback)
     {
-        return self::boot()->addRoute('DELETE', $url, $callback);
+        return self::addRoute('DELETE', $url, $callback);
     }
 
     /**
@@ -162,30 +160,19 @@ class Route
      */
     static public function options($url, $callback)
     {
-        return self::boot()->addRoute('OPTIONS', $url, $callback);
+        return self::addRoute('OPTIONS', $url, $callback);
     }
 
     /**
-     * Define a group of routes with a common prefix.
+     * Define a group of routes with a common prefix and optional middleware.
      *
-     * @param string $prefix
+     * @param string|array $middlewareOrPrefix
      * @param Closure|null $callback
+     * @return $this
      */
-    static public function group($prefix, $callback = null)
+    public static function group($middlewareOrPrefix, Closure $callback = null)
     {
-        // Store the current prefix
-        $previousPrefix = self::$prefix;
-
-        // Set the new prefix for this group
-        self::$prefix .= $prefix;
-
-        // Call the callback to define routes within the group
-        if($callback instanceof Closure){
-            $callback();
-        }
-
-        // Restore the previous prefix after defining group routes
-        self::$prefix = $previousPrefix;
+        return self::addToGroup($middlewareOrPrefix, $callback);
     }
 
     /**
@@ -197,13 +184,12 @@ class Route
      */
     static public function any($url, $callback)
     {
-        return self::boot()
-                ->addRoute('GET', $url, $callback)
-                ->addRoute('POST', $url, $callback)
-                ->addRoute('PUT', $url, $callback)
-                ->addRoute('PATCH', $url, $callback)
-                ->addRoute('DELETE', $url, $callback)
-                ->addRoute('OPTIONS', $url, $callback);
+        return self::addRoute('GET', $url, $callback)
+                    ->addRoute('POST', $url, $callback)
+                    ->addRoute('PUT', $url, $callback)
+                    ->addRoute('PATCH', $url, $callback)
+                    ->addRoute('DELETE', $url, $callback)
+                    ->addRoute('OPTIONS', $url, $callback);
     }
 
 }

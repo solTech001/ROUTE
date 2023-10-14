@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tamedevelopers\Route\Traits;
 
+use Closure;
 use Exception;
 use Tamedevelopers\Support\Capsule\Manager;
 
@@ -18,6 +19,64 @@ use Tamedevelopers\Support\Capsule\Manager;
  */
 trait RouteHelperTrait
 {
+
+    /**
+     * Define a group of routes with a common prefix and optional middleware.
+     *
+     * @param string|array $middlewareOrPrefix
+     * @param Closure|null $callback
+     * 
+     * @return $this
+     */
+    public static function addToGroup($middlewareOrPrefix, Closure $callback = null)
+    {
+        // Set the prefix and middleware based on the argument type
+        $prefix = null;
+        $middlewares = [];
+
+        if (is_array($middlewareOrPrefix)) {
+            if (isset($middlewareOrPrefix['prefix'])) {
+                $prefix = $middlewareOrPrefix['prefix'];
+            }
+
+            if (isset($middlewareOrPrefix['middleware'])) {
+                $middlewares = is_array($middlewareOrPrefix['middleware']) ?
+                    $middlewareOrPrefix['middleware'] :
+                    [$middlewareOrPrefix['middleware']];
+            }
+        } elseif (is_string($middlewareOrPrefix)) {
+            $prefix = $middlewareOrPrefix;
+        }
+
+        // Store the current prefix and middlewares
+        $previousPrefix = self::$prefix;
+        $previousMiddlewares = self::$middlewares;
+
+        // Set the new prefix and middlewares for this group
+        if (!is_null($prefix)) {
+            self::$prefix .= '/' . trim($prefix, '/');
+        }
+
+        self::$middlewares = array_merge(self::$middlewares, $middlewares);
+        // self::$prefix = array_merge(self::$prefix, $prefix);
+
+        // dd(
+        //     $prefix,
+        //     $middlewares,
+        //     $middlewareOrPrefix,
+        //     self::$prefix
+        // );
+
+        // Call the callback to define routes within the group
+        $callback();
+
+        // Restore the previous prefix and middlewares after defining group routes
+        self::$prefix = $previousPrefix;
+        self::$middlewares = $previousMiddlewares;
+
+        return self::instance();
+    }
+
     /**
      * Get the URL of a named route.
      *
@@ -147,9 +206,5 @@ trait RouteHelperTrait
     {
         Manager::setHeaders($status);
     }
-    
-    
-
-    
 
 }

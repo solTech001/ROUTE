@@ -47,14 +47,14 @@ class AutoloadRegister{
                 self::$baseDirectory = self::formatWithBaseDirectory($directory);
                 // only allow is an existing directory
                 if(is_dir(self::$baseDirectory)){
-                    self::boot();
+                    self::instance();
                 }
             }
         } else{
             self::$baseDirectory = self::formatWithBaseDirectory($baseDirectory);
             // only allow is an existing directory
             if(is_dir(self::$baseDirectory)){
-                self::boot();
+                self::instance();
             }
         }
     }
